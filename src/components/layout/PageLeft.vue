@@ -19,10 +19,10 @@
         draggable="true"
         @dragstart="handleDragstart(item)"
       >
-        <div class="component-title">{{ item.title }}</div>
         <div class="component-img-box">
           <img :src="item.src" class="component-img" />
         </div>
+        <div class="component-title">{{ item.title }}</div>
       </div>
     </div>
   </div>
@@ -105,13 +105,14 @@ export default {
   .component-item {
     cursor: pointer;
     width: 140px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 30px auto;
     border-bottom: 1px solid var(--border-color);
 
     .component-title {
       font-size: 18px;
       color: var(--text-color);
       text-align: center;
+      margin-top: 10px;
     }
 
     .component-img-box {

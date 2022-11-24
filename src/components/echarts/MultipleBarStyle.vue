@@ -1,8 +1,18 @@
-<!-- 折线图 -->
+<!-- 分组柱状图 -->
 <template>
   <div v-if="currentComponent.options">
     <div class="title">echarts配置</div>
     <div class="form-body">
+      <div class="form-group">
+        <div>Y轴名称：</div>
+        <div>
+          <a-input
+            v-model="handleNull(currentComponent.options.yAxisOptions).name"
+            type="text"
+            @input="handleInput"
+          />
+        </div>
+      </div>
       <div class="form-group">
         <div>数据名称：</div>
         <div>
@@ -13,23 +23,21 @@
           />
         </div>
       </div>
-
       <div class="form-group">
         <div>上位置：</div>
         <div>
           <a-input
-            v-model="currentComponent.options.grid.top"
+            v-model="handleNull(currentComponent.options.grid).top"
             type="text"
             @input="handleInput"
           />
         </div>
       </div>
-
       <div class="form-group">
         <div>左位置：</div>
         <div>
           <a-input
-            v-model="currentComponent.options.grid.left"
+            v-model="handleNull(currentComponent.options.grid).left"
             type="text"
             @input="handleInput"
           />
@@ -40,18 +48,17 @@
         <div>右位置：</div>
         <div>
           <a-input
-            v-model="currentComponent.options.grid.right"
+            v-model="handleNull(currentComponent.options.grid).right"
             type="text"
             @input="handleInput"
           />
         </div>
       </div>
-
       <div class="form-group">
         <div>下位置：</div>
         <div>
           <a-input
-            v-model="currentComponent.options.grid.bottom"
+            v-model="handleNull(currentComponent.options.grid).bottom"
             type="text"
             @input="handleInput"
           />
@@ -59,10 +66,10 @@
       </div>
 
       <div class="form-group">
-        <div>是否平滑：</div>
+        <div>标签：</div>
         <div>
           <a-switch
-            v-model="currentComponent.options.seriesOptions.smooth"
+            v-model="handleNull(currentComponent.options.seriesOptions.label).show"
             @change="handleInput"
           />
         </div>
@@ -74,11 +81,10 @@
 <script>
 import styleMinix from '../styleMinix'
 export default {
-  name: 'PieStyle',
+  name: 'MultipleBarStyle',
   mixins: [styleMinix]
 }
 </script>
-
 <style lang="scss" scoped>
 @import '@/assets/styles/component.scss';
 </style>

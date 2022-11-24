@@ -66,10 +66,9 @@ export default {
   }
   .animate-item {
     width: 96px;
-    height: 96px;
-    line-height: 96px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
-    border: 1px solid var(--primary-color);
     margin-bottom: 10px;
     margin-right: 10px;
     display: flex;
@@ -86,7 +85,7 @@ export default {
     margin: 0 auto;
     background: var(--primary-color);
     font-size: 12px;
-    color: var(--text-color);
+    color: #fff;
   }
 }
 </style>
