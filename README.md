@@ -1,4 +1,4 @@
-# custom-cli
+# xw-view-editor
 
 ## Project setup
 ```
