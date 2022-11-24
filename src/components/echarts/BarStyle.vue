@@ -1,3 +1,4 @@
+<!-- 柱状图 -->
 <template>
   <div v-if="currentComponent.options">
     <div class="title">echarts配置</div>

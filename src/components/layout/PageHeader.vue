@@ -39,7 +39,6 @@
       <div class="editor-info">
         实际尺寸：<a-input
           v-model="globalConfig.editor.width"
-          size="small"
           @change="editorSizeChange"
         />
         ×
@@ -49,9 +48,8 @@
         />
         画布比例：<a-input
           v-model="globalConfig.editor.scale"
-          size="small"
           @change="editorScaleChange"
-        />%
+        /> %
       </div>
       <div class="right-btn">
         <a-select v-model="themeValue" style="margin-right: 10px;" @change="changeTheme">
