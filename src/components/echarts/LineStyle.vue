@@ -67,6 +67,27 @@
           />
         </div>
       </div>
+
+      <div class="form-group">
+        <div>颜色：</div>
+        <div>
+          <a-input
+            v-model="handleNull(currentComponent.options.seriesOptions).itemStyle.color"
+            type="color"
+            @change="handleInput"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div>标签：</div>
+        <div>
+          <a-switch
+            v-model="handleNull(currentComponent.options.labelOptions).show"
+            @change="handleInput"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -74,7 +95,6 @@
 <script>
 import styleMinix from '../styleMinix'
 export default {
-  name: 'PieStyle',
   mixins: [styleMinix]
 }
 </script>

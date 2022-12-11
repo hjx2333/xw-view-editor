@@ -168,7 +168,7 @@ export default {
 
     handleDrop(e) {
       const component = deepCopy(this.dragStartComponent)
-      component.id = uuid()
+      component.id = uuid().replace(/-/g, '')
       this.initPosition(component, e)
 
       // 更新全局状态
