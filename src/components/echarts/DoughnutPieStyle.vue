@@ -1,4 +1,4 @@
-<!-- 饼图 -->
+<!-- 环状图 -->
 <template>
   <div v-if="currentComponent.options">
     <div class="title">echarts配置</div>
@@ -39,24 +39,19 @@
       </div>
     </div>
 
-    <div class="title">文本标签配置</div>
+    <div class="title">标题配置</div>
     <div class="form-body">
       <div class="form-group">
-        <div>是否展示：</div>
+        <div>一级标题：</div>
         <div>
-          <a-switch
-            v-model="handleNull(currentComponent.options.labelOptions).show"
-            @change="handleInput"
-          />
+          <a-input v-model="handleNull(currentComponent.options.titleOptions).text" type="text" @input="handleInput" />
         </div>
       </div>
 
       <div class="form-group">
-        <div>位置：</div>
+        <div>二级标题：</div>
         <div>
-          <a-select v-model="handleNull(currentComponent.options.labelOptions).position" @change="handleInput">
-            <a-select-option v-for="item in position" :key="item.key" :value="item.key">{{ item.value }}</a-select-option>
-          </a-select>
+          <a-input v-model="handleNull(currentComponent.options.titleOptions).subtext" type="text" @input="handleInput" />
         </div>
       </div>
     </div>
@@ -64,14 +59,11 @@
 </template>
 
 <script>
-import { position } from '@/utils/dictionary'
 import styleMinix from '../styleMinix'
 export default {
-  name: 'PieStyle',
   mixins: [styleMinix],
   data() {
     return {
-      position
     }
   }
 }

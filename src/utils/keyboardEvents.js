@@ -87,7 +87,7 @@ export function pasteComponent() {
 
   data = deepCopy(data)
   const { top, left } = data.style
-  data.id = uuid()
+  data.id = uuid().replace(/-/g, '')
   Object.assign(data.style, {
     top: `${parseInt(top) + 60}px`,
     left: `${parseInt(left) + 60}px`

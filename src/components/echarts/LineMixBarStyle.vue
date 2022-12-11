@@ -1,9 +1,9 @@
-<!-- 分组柱状图 -->
+<!-- 柱状图 -->
 <template>
   <div v-if="currentComponent.options">
     <div class="title">echarts配置</div>
     <div class="form-body">
-      <div class="form-group">
+      <!-- <div class="form-group">
         <div>Y轴名称：</div>
         <div>
           <a-input
@@ -13,7 +13,7 @@
           />
         </div>
       </div>
-      <!-- <div class="form-group">
+      <div class="form-group">
         <div>数据名称：</div>
         <div>
           <a-input
@@ -64,12 +64,47 @@
           />
         </div>
       </div>
+      <div class="form-group-block">
+        <div>颜色：</div>
+        <div class="form-item-flex">
+          <a-input
+            v-model="currentComponent.options.rangeColor.start"
+            type="color"
+            style="width: 100px"
+            @input="handleInput"
+          />
+          <span>&nbsp;-&nbsp;</span>
+          <a-input
+            v-model="currentComponent.options.rangeColor.end"
+            type="color"
+            style="width: 100px"
+            @input="handleInput"
+          />
+        </div>
+      </div>
+    </div>
 
+    <div class="title">折线配置</div>
+    <div class="form-body">
       <div class="form-group">
-        <div>标签：</div>
+        <div>颜色：</div>
+        <div>
+          <a-input
+            v-model="
+              handleNull(currentComponent.options.seriesOptions.line).itemStyle
+                .color
+            "
+            type="color"
+            @change="handleInput"
+          />
+        </div>
+      </div>
+
+       <div class="form-group">
+        <div>是否平滑：</div>
         <div>
           <a-switch
-            v-model="handleNull(currentComponent.options.labelOptions).show"
+            v-model="handleNull(currentComponent.options.seriesOptions.line).smooth"
             @change="handleInput"
           />
         </div>
@@ -81,7 +116,6 @@
 <script>
 import styleMinix from '../styleMinix'
 export default {
-  name: 'StackedBarStyle',
   mixins: [styleMinix]
 }
 </script>

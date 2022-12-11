@@ -13,7 +13,7 @@
           />
         </div>
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <div>数据名称：</div>
         <div>
           <a-input
@@ -22,7 +22,7 @@
             @input="handleInput"
           />
         </div>
-      </div>
+      </div> -->
       <div class="form-group">
         <div>上位置：</div>
         <div>
@@ -68,7 +68,7 @@
         <div>标签：</div>
         <div>
           <a-switch
-            v-model="handleNull(currentComponent.options.seriesOptions.label).show"
+            v-model="handleNull(currentComponent.options.labelOptions).show"
             @change="handleInput"
           />
         </div>

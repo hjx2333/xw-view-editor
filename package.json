@@ -1,5 +1,5 @@
 {
-  "name": "xw-view",
+  "name": "xw-view-editor",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,7 +17,6 @@
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.8.3",
     "file-saver": "^2.0.5",
-    "mavon-editor": "^2.10.4",
     "monaco-editor": "^0.34.1",
     "monaco-editor-webpack-plugin": "^7.0.1",
     "node-polyfill-webpack-plugin": "^2.0.1",
